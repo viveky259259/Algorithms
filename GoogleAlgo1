@@ -1,0 +1,25 @@
+// given a non empty array if integers return the k most frequent elements;
+// input : [1,1,1,2,2,3]
+// output:[1,2]
+// Input:[1]
+// output: [1]
+//assum k is always valid 1<=k<= number of unique elements. TIme compelxity must be better than O(n log n) where n is array size
+
+main(List<String> args) {
+  List<int>input=[1,1,1,2,2,3];
+  Map<int,int> values={};
+input.forEach((f){
+  print("f: ${values[f]}");
+  if(values[f]==null)values[f]=0;
+values[f]=values[f]+1;});
+print(values);
+print("Result");
+//  print(values.entries.toList());
+
+  print(values.values.toList().getRange(0, values.values.length<2?values.values.length:2));
+// values.values.toList().getRange(0, 2).forEach((f){
+ 
+// print("Value:$f");
+// });
+
+}
